@@ -1,5 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
+import FivePercent from './FivePercent';
+import TenPercent from './TenPercent';
+import FifteenPercent from './FifteenPercent';
+import TwentyFivePercent from './TwentyFivePercent';
+import FiftyPercent from './FiftyPercent';
+import CustomPercent from './CustomPercent';
 
 const App = () => {
 	const [fivePercent, setfivePercent] = useState('5%');
@@ -14,10 +20,6 @@ const App = () => {
 	const [totalAmountPerson, settotalAmountPerson] = useState('0');
 	const [zeroInput, setzeroInput] = useState('');
 
-	// let numberPeopleStyle = {
-	// 	borderColor: '#dbdbdb',
-	// };
-
 	const handleBillInputChange = (e) => {
 		setbillInput(e.target.value);
 		console.log('bill input', billInput);
@@ -26,6 +28,21 @@ const App = () => {
 	const handleCustomChange = (e) => {
 		setcustomPercent(e.target.value);
 		console.log('custom percent', customPercent);
+		const getCustomPercent = customPercent / 100;
+		if (numberPeople === '0') {
+			settipAmount('0');
+			settotalAmountPerson('0');
+		} else {
+			settipAmount(
+				((getCustomPercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(
+					((getCustomPercent * billInput) / numberPeople) *
+					7.68
+				).toFixed(2)
+			);
+		}
 	};
 
 	const handleNumberPeopleChange = (e) => {
@@ -44,9 +61,15 @@ const App = () => {
 		const getFivePercent = 5 / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
+			settotalAmountPerson('0');
 		} else {
 			settipAmount(
 				((getFivePercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(((getFivePercent * billInput) / numberPeople) * 7.68).toFixed(
+					2
+				)
 			);
 		}
 	};
@@ -55,9 +78,13 @@ const App = () => {
 		const getTenPercent = 10 / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
+			settotalAmountPerson('0');
 		} else {
 			settipAmount(
 				((getTenPercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(((getTenPercent * billInput) / numberPeople) * 7.68).toFixed(2)
 			);
 		}
 	};
@@ -66,9 +93,16 @@ const App = () => {
 		const getFifteenPercent = 15 / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
+			settotalAmountPerson('0');
 		} else {
 			settipAmount(
 				((getFifteenPercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(
+					((getFifteenPercent * billInput) / numberPeople) *
+					7.68
+				).toFixed(2)
 			);
 		}
 	};
@@ -77,9 +111,16 @@ const App = () => {
 		const getTwentyFivePercent = 25 / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
+			settotalAmountPerson('0');
 		} else {
 			settipAmount(
 				((getTwentyFivePercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(
+					((getTwentyFivePercent * billInput) / numberPeople) *
+					7.68
+				).toFixed(2)
 			);
 		}
 	};
@@ -88,27 +129,30 @@ const App = () => {
 		const getFiftyPercent = 50 / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
+			settotalAmountPerson('0');
 		} else {
 			settipAmount(
 				((getFiftyPercent * billInput) / numberPeople).toFixed(2)
+			);
+			settotalAmountPerson(
+				(((getFiftyPercent * billInput) / numberPeople) * 7.68).toFixed(
+					2
+				)
 			);
 		}
 	};
 
 	const handleReset = () => {
 		settipAmount('0');
+		settotalAmountPerson('0');
 		setbillInput('');
 		setnumberPeople('');
+		setcustomPercent('');
 	};
-
-	// if (numberPeople === '0') {
-	// 	numberPeopleStyle.borderColor = 'red';
-	// } else {
-	// 	numberPeopleStyle.borderColor = '#dbdbdb';
-	// }
 
 	console.log('tip amount', tipAmount);
 	console.log('zero input', zeroInput);
+	console.log('total amount', totalAmountPerson);
 
 	return (
 		<div className='allContainer'>
@@ -133,43 +177,37 @@ const App = () => {
 					<div className='tipCalc'>
 						<p className='tip'>Select Tip %</p>
 						<div className='buttons'>
-							<button
-								className='button five'
-								type='button'
-								onClick={handleFivePercentClick}>
-								{fivePercent}
-							</button>
-							<button
-								className='button ten'
-								type='button'
-								onClick={handleTenPercentClick}>
-								{tenPercent}
-							</button>
-							<button
-								className='button fifteen'
-								type='button'
-								onClick={handleFifteenPercentClick}>
-								{fifteenPercent}
-							</button>
-							<button
-								className='button twentyFive'
-								type='button'
-								onClick={handleTwentyFivePercentClick}>
-								{twentyFivePercent}
-							</button>
-							<button
-								className='button fifty'
-								type='button'
-								onClick={handleFiftyPercentClick}>
-								{fiftyPercent}
-							</button>
-							<input
+							<FivePercent
+								handleClick={handleFivePercentClick}
+								fivePercent={fivePercent}
+							/>
+							<TenPercent
+								handleClick={handleTenPercentClick}
+								tenPercent={tenPercent}
+							/>
+							<FifteenPercent
+								handleClick={handleFifteenPercentClick}
+								fifteenPercent={fifteenPercent}
+							/>
+							<TwentyFivePercent
+								handleClick={handleTwentyFivePercentClick}
+								twentyFivePercent={twentyFivePercent}
+							/>
+							<FiftyPercent
+								handleClick={handleFiftyPercentClick}
+								fiftyPercent={fiftyPercent}
+							/>
+							<CustomPercent
+								percentValue={customPercent}
+								handleChange={handleCustomChange}
+							/>
+							{/* <input
 								type='text'
 								className='input custom'
 								placeholder='Custom'
 								value={customPercent}
 								onChange={handleCustomChange}
-							/>
+							/> */}
 						</div>
 					</div>
 					<div className='peopleCalc'>

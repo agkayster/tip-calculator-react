@@ -79,10 +79,11 @@
 		height: 30px;
 	}
 
-	.buttons {
+	div.buttons {
 		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	button.button.reset {
@@ -144,10 +145,11 @@
 		background-color: hsl(172, 67%, 45%);
 	}
 
-	button.button.custom {
+	input.input.custom {
 		font-family: 'Space Mono', monospace;
 		font-weight: 700;
 		background-color: hsl(189, 41%, 97%);
+		margin-bottom: 8px;
 	}
 
 	.peopleCalc {
