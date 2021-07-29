@@ -37,6 +37,274 @@
 	}
 }
 
+@media only screen and (min-width: 1440px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		height: 100vh;
+		line-height: 1.6;
+		font-size: 24px;
+	}
+
+	.splitter {
+		font-weight: 700;
+		font-size: 24px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		padding: 40px;
+		letter-spacing: 5px;
+		font-family: 'Space Mono', monospace;
+	}
+
+	.container {
+		display: flex;
+		border-style: hidden;
+		border-radius: 16px;
+		background-color: hsl(0, 0%, 100%);
+		padding: 20px;
+		height: 440px;
+	}
+
+	div.container:not(.is-max-desktop):not(.is-max-widescreen) {
+		max-width: 800px;
+	}
+
+	.billPeople {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 20px;
+	}
+
+	.allContainer {
+		background-color: hsl(185, 41%, 84%);
+		height: 100vh;
+	}
+
+	.inputBill {
+		margin-bottom: 20px;
+	}
+
+	button {
+		width: 100px;
+		height: 30px;
+	}
+
+	div.buttons {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-right: 0px;
+		padding-right: 60px;
+	}
+
+	button.button.reset {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.five {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.five:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.ten {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.ten:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.fifteen {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.fifteen:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.twentyFive {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.twentyFive:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.fifty {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.fifty:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	/* input.input.custom {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(189, 41%, 97%);
+	} */
+
+	.peopleCalc {
+		margin-top: 20px;
+	}
+
+	.tipTotal {
+		border-style: hidden;
+		margin-top: 10px;
+		border-radius: 16px;
+		height: 380px;
+		padding: 40px;
+		background-color: hsl(183, 100%, 15%);
+		width: 70vw;
+	}
+
+	.totalPerson {
+		margin-top: 20px;
+	}
+
+	.reset {
+		margin-top: 120px;
+		width: 250px;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+	}
+
+	.tipFig {
+		color: hsl(172, 67%, 45%);
+		font-family: 'Space Mono', monospace;
+		font-weight: 900;
+		font-size: 20px;
+	}
+
+	.totFig {
+		color: hsl(172, 67%, 45%);
+		font-family: 'Space Mono', monospace;
+		font-weight: 900;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+
+	.tipperAmt {
+		font-family: 'Space Mono', monospace;
+		font-size: 12px;
+		color: hsl(0, 0%, 100%);
+		font-weight: 700;
+	}
+
+	.tipAmt {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.totalPerson {
+		font-family: 'Space Mono', monospace;
+		font-size: 12px;
+		color: hsl(0, 0%, 100%);
+		font-weight: 700;
+		/* margin-top: 60px; */
+	}
+
+	.totPerson {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		justify-content: space-between;
+	}
+
+	.person {
+		font-family: 'Space Mono', monospace;
+		font-size: 10px;
+		color: hsl(172, 67%, 45%);
+	}
+
+	.people {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.tip {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.bill {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	input.input.peopN {
+		background-color: hsl(189, 41%, 97%);
+		width: 22vw;
+	}
+
+	input.input.peopN:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
+
+	input.input.billInput {
+		background-color: hsl(189, 41%, 97%);
+		width: 22vw;
+	}
+
+	.input::after {
+		text-align: right;
+	}
+
+	input.input.billInput:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
+
+	.zeroInput {
+		float: right;
+	}
+
+	input.input.custom {
+		width: 100px;
+		font-family: 'Space Mono', monospace;
+		text-align: center;
+		font-weight: 900;
+		color: hsl(172, 67%, 45%);
+		background-color: hsl(189, 41%, 97%);
+		margin-bottom: 8px;
+	}
+
+	input.input.custom:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
+}
+
 @media only screen and (min-width: 320px) and (max-width: 768px) {
 	* {
 		box-sizing: border-box;

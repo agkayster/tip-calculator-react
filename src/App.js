@@ -22,12 +22,10 @@ const App = () => {
 
 	const handleBillInputChange = (e) => {
 		setbillInput(e.target.value);
-		console.log('bill input', billInput);
 	};
 
 	const handleCustomChange = (e) => {
 		setcustomPercent(e.target.value);
-		console.log('custom percent', customPercent);
 		const getCustomPercent = customPercent / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
@@ -48,7 +46,6 @@ const App = () => {
 	const handleNumberPeopleChange = (e) => {
 		setnumberPeople(e.target.value);
 		const eValue = e.target.value;
-		console.log('e value', eValue);
 
 		if (eValue === '0') {
 			setzeroInput('Do not put zero!');
@@ -201,13 +198,6 @@ const App = () => {
 								percentValue={customPercent}
 								handleChange={handleCustomChange}
 							/>
-							{/* <input
-								type='text'
-								className='input custom'
-								placeholder='Custom'
-								value={customPercent}
-								onChange={handleCustomChange}
-							/> */}
 						</div>
 					</div>
 					<div className='peopleCalc'>
