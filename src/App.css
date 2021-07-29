@@ -1,38 +1,283 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		height: 100vh;
+		line-height: 1.6;
+		font-size: 24px;
+	}
+
+	.splitter {
+		font-weight: 700;
+		font-size: 24px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		padding: 40px;
+		letter-spacing: 5px;
+		font-family: 'Space Mono', monospace;
+	}
+
+	.container {
+		border-style: hidden;
+		border-radius: 16px 16px 0 0;
+		background-color: hsl(0, 0%, 100%);
+		padding: 50px;
+	}
+
+	.allContainer {
+		background-color: hsl(185, 41%, 84%);
+	}
+
+	.inputBill {
+		margin-bottom: 20px;
+	}
+
+	button {
+		width: 129.5px;
+		height: 30px;
+	}
+
+	.buttons {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	button.button.reset {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.five {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.five:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.ten {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.ten:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.fifteen {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.fifteen:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.twentyFive {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.twentyFive:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.fifty {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(183, 100%, 15%);
+		color: hsl(0, 0%, 100%);
+	}
+
+	button.button.fifty:hover {
+		background-color: hsl(172, 67%, 45%);
+	}
+
+	button.button.custom {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		background-color: hsl(189, 41%, 97%);
+	}
+
+	.peopleCalc {
+		margin-top: 20px;
+	}
+
+	.tipTotal {
+		border-style: hidden;
+		margin-top: 20px;
+		border-radius: 16px;
+		height: 250px;
+		padding: 20px;
+		background-color: hsl(183, 100%, 15%);
+	}
+
+	.reset {
+		margin-top: 40px;
+		width: 235px;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+	}
+
+	.tipperAmt {
+		font-family: 'Space Mono', monospace;
+		font-size: 12px;
+		color: hsl(0, 0%, 100%);
+		font-weight: 700;
+	}
+
+	.tipAmt {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+
+	.totalPerson {
+		font-family: 'Space Mono', monospace;
+		font-size: 12px;
+		color: hsl(0, 0%, 100%);
+		font-weight: 700;
+	}
+
+	.totPerson {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		justify-content: space-between;
+	}
+
+	.person {
+		font-family: 'Space Mono', monospace;
+		font-size: 10px;
+		color: hsl(172, 67%, 45%);
+	}
+
+	.tipFig {
+		font-family: 'Space Mono', monospace;
+		font-weight: 900;
+		font-size: 20px;
+		color: hsl(172, 67%, 45%);
+	}
+
+	.totFig {
+		font-family: 'Space Mono', monospace;
+		font-weight: 900;
+		font-size: 20px;
+		color: hsl(172, 67%, 45%);
+	}
+
+	.people {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.tip {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.bill {
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	input.input.peopN {
+		background-color: hsl(189, 41%, 97%);
+	}
+
+	input.input.peopN:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
+
+	input.input.billInput {
+		background-color: hsl(189, 41%, 97%);
+	}
+
+	.input::after {
+		text-align: right;
+	}
+
+	input.input.billInput:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
+
+	.billInput {
+		width: 60vw;
+	}
+
+	.zeroInput {
+		float: right;
+	}
+
+	input.input.custom {
+		width: 130px;
+		font-family: 'Space Mono', monospace;
+		text-align: center;
+		font-weight: 900;
+		color: hsl(172, 67%, 45%);
+	}
+
+	input.input.custom:focus {
+		border-color: hsl(172, 67%, 45%);
+	}
 }
