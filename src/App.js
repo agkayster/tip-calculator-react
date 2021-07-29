@@ -8,11 +8,11 @@ import FiftyPercent from './FiftyPercent';
 import CustomPercent from './CustomPercent';
 
 const App = () => {
-	const [fivePercent, setfivePercent] = useState('5%');
-	const [tenPercent, settenPercent] = useState('10%');
-	const [fifteenPercent, setfifteenPercent] = useState('15%');
-	const [twentyFivePercent, settwentyFivePercent] = useState('25%');
-	const [fiftyPercent, setfiftyPercent] = useState('50%');
+	const [fivePercent] = useState('5%');
+	const [tenPercent] = useState('10%');
+	const [fifteenPercent] = useState('15%');
+	const [twentyFivePercent] = useState('25%');
+	const [fiftyPercent] = useState('50%');
 	const [customPercent, setcustomPercent] = useState('');
 	const [billInput, setbillInput] = useState('');
 	const [numberPeople, setnumberPeople] = useState('');
