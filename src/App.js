@@ -6,6 +6,9 @@ import FifteenPercent from './FifteenPercent';
 import TwentyFivePercent from './TwentyFivePercent';
 import FiftyPercent from './FiftyPercent';
 import CustomPercent from './CustomPercent';
+import logoPath from './images/logo.svg';
+import dollarPath from './images/icon-dollar.svg';
+import personPath from './images/icon-person.svg';
 
 const App = () => {
 	const [fivePercent] = useState('5%');
@@ -153,22 +156,30 @@ const App = () => {
 
 	return (
 		<div className='allContainer'>
-			<h1 className='splitter'>
-				SPLI
-				<br />
-				TTER
-			</h1>
+			<header>
+				<div className='header-img'>
+					<img src={logoPath} alt='logo' className='img-logo' />
+				</div>
+			</header>
 			<div className='container'>
 				<div className='billPeople'>
 					<div className='inputBill'>
-						<p className='bill'>Bill</p>
+						<label htmlFor='bill' className='bill'>
+							Bill
+						</label>
 						<input
 							className='input billInput'
 							id='billInput'
-							type='text'
-							placeholder='$'
+							type='number'
+							required
+							name='bill'
 							value={billInput}
 							onChange={handleBillInputChange}
+						/>
+						<img
+							src={dollarPath}
+							alt='dollar icon'
+							className='dollar-icon'
 						/>
 					</div>
 					<div className='tipCalc'>
@@ -201,25 +212,27 @@ const App = () => {
 						</div>
 					</div>
 					<div className='peopleCalc'>
-						<p className='people'>
+						<label htmlFor='num-of-people' className='people'>
 							Number of People
-							<span className='zeroInput'>{zeroInput}</span>
-						</p>
-						<div className='inputPlace'>
-							<input
-								className='input peopN'
-								type='text'
-								value={numberPeople}
-								onChange={handleNumberPeopleChange}
-								style={{
-									borderColor:
-										numberPeople === '0'
-											? 'red'
-											: '#dbdbdb',
-								}}
-							/>
-							<i className='fa fa-user' aria-hidden='true'></i>
-						</div>
+						</label>
+						<span className='zeroInput'></span>
+						<input
+							className='input peopN'
+							type='number'
+							name='people'
+							required
+							value={numberPeople}
+							onChange={handleNumberPeopleChange}
+							style={{
+								borderColor:
+									numberPeople === '0' ? 'red' : '#dbdbdb',
+							}}
+						/>
+						<img
+							src={personPath}
+							alt='persons icon'
+							className='persons'
+						/>
 					</div>
 				</div>
 				<div className='tipTotal'>

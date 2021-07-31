@@ -316,15 +316,11 @@
 		font-size: 24px;
 	}
 
-	.splitter {
-		font-weight: 700;
-		font-size: 24px;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		padding: 40px;
-		letter-spacing: 5px;
-		font-family: 'Space Mono', monospace;
+	.img-logo {
+		padding: 30px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.container {
@@ -511,8 +507,27 @@
 		margin-bottom: 5px;
 	}
 
+	label.bill {
+		margin-bottom: 25px;
+	}
+
 	input.input.peopN {
 		background-color: hsl(189, 41%, 97%);
+	}
+
+	.peopN {
+		text-align: right;
+		font-family: 'Space Mono', monospace;
+		transition: 0.3s ease-out;
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+	}
+
+	.persons {
+		position: absolute;
+		top: 350px;
+		left: 60px;
 	}
 
 	input.input.peopN:focus {
@@ -523,16 +538,24 @@
 		background-color: hsl(189, 41%, 97%);
 	}
 
-	.input::after {
-		text-align: right;
-	}
-
 	input.input.billInput:focus {
 		border-color: hsl(172, 67%, 45%);
 	}
 
 	.billInput {
 		width: 60vw;
+		text-align: right;
+		transition: 0.3s ease-out;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 24px;
+		border-style: hidden;
+	}
+
+	.dollar-icon {
+		position: absolute;
+		top: 85px;
+		left: 55px;
 	}
 
 	.zeroInput {
