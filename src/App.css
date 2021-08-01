@@ -320,7 +320,7 @@
 	input.input.custom {
 		width: 100px;
 		font-family: 'Space Mono', monospace;
-		text-align: center;
+		text-align: right;
 		font-weight: 900;
 		color: hsl(172, 67%, 45%);
 		background-color: hsl(189, 41%, 97%);

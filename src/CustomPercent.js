@@ -1,7 +1,7 @@
 const CustomPercent = ({ percentValue, handleChange }) => {
 	return (
 		<input
-			type='text'
+			type='number'
 			value={percentValue}
 			onChange={handleChange}
 			placeholder='Custom'

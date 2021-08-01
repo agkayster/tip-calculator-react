@@ -29,7 +29,8 @@ const App = () => {
 
 	const handleCustomChange = (e) => {
 		setcustomPercent(e.target.value);
-		const getCustomPercent = customPercent / 100;
+		const custVal = e.target.value
+		const getCustomPercent = custVal / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
 			settotalAmountPerson('0');
