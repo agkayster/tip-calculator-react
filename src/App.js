@@ -29,7 +29,7 @@ const App = () => {
 
 	const handleCustomChange = (e) => {
 		setcustomPercent(e.target.value);
-		const custVal = e.target.value
+		const custVal = e.target.value;
 		const getCustomPercent = custVal / 100;
 		if (numberPeople === '0') {
 			settipAmount('0');
@@ -214,7 +214,7 @@ const App = () => {
 						</div>
 					</div>
 					<div className='peopleCalc'>
-						<label htmlFor='num-of-people' className='people'>
+						<p htmlFor='num-of-people' className='people'>
 							Number of People
 							<span
 								className='zeroInput'
@@ -224,7 +224,7 @@ const App = () => {
 								}}>
 								{zeroInput}
 							</span>
-						</label>
+						</p>
 
 						<input
 							className='input peopN'
