@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 .App {
 	text-align: center;
 }
@@ -48,15 +50,11 @@
 		font-size: 24px;
 	}
 
-	.splitter {
-		font-weight: 700;
-		font-size: 24px;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		padding: 40px;
-		letter-spacing: 5px;
-		font-family: 'Space Mono', monospace;
+	.img-logo {
+		padding: 30px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.container {
@@ -260,13 +258,33 @@
 	.bill {
 		font-family: 'Space Mono', monospace;
 		font-weight: 700;
-		font-size: 12px;
+		font-size: 15px;
 		margin-bottom: 5px;
+	}
+
+	label.bill {
+		margin-bottom: 25px;
 	}
 
 	input.input.peopN {
 		background-color: hsl(189, 41%, 97%);
-		width: 22vw;
+		width: 23vw;
+	}
+
+	.peopN {
+		text-align: right;
+		font-family: 'Space Mono', monospace;
+		transition: 0.3s ease-out;
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+		margin-top: 5px;
+	}
+
+	.persons {
+		position: absolute;
+		top: 345px;
+		left: 50px;
 	}
 
 	input.input.peopN:focus {
@@ -275,19 +293,28 @@
 
 	input.input.billInput {
 		background-color: hsl(189, 41%, 97%);
-		width: 22vw;
+		width: 23vw;
 	}
 
-	.input::after {
+	.billInput {
 		text-align: right;
+		transition: 0.3s ease-out;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 24px;
+		border-style: hidden;
+		margin-top: 5px;
+		margin-right: 30px;
+	}
+
+	.dollar-icon {
+		position: absolute;
+		top: 80px;
+		left: 45px;
 	}
 
 	input.input.billInput:focus {
 		border-color: hsl(172, 67%, 45%);
-	}
-
-	.zeroInput {
-		float: right;
 	}
 
 	input.input.custom {
@@ -302,6 +329,14 @@
 
 	input.input.custom:focus {
 		border-color: hsl(172, 67%, 45%);
+	}
+
+	.zeroInput {
+		float: right;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
+		padding-right: 60px;
 	}
 }
 
@@ -503,7 +538,7 @@
 	.bill {
 		font-family: 'Space Mono', monospace;
 		font-weight: 700;
-		font-size: 12px;
+		font-size: 15px;
 		margin-bottom: 5px;
 	}
 
@@ -526,7 +561,7 @@
 
 	.persons {
 		position: absolute;
-		top: 350px;
+		top: 355px;
 		left: 60px;
 	}
 
@@ -550,16 +585,13 @@
 		font-weight: 700;
 		font-size: 24px;
 		border-style: hidden;
+		margin-top: 5px;
 	}
 
 	.dollar-icon {
 		position: absolute;
-		top: 85px;
+		top: 90px;
 		left: 55px;
-	}
-
-	.zeroInput {
-		float: right;
 	}
 
 	input.input.custom {
@@ -572,5 +604,12 @@
 
 	input.input.custom:focus {
 		border-color: hsl(172, 67%, 45%);
+	}
+
+	.zeroInput {
+		float: right;
+		font-family: 'Space Mono', monospace;
+		font-weight: 700;
+		font-size: 12px;
 	}
 }

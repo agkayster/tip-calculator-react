@@ -51,7 +51,7 @@ const App = () => {
 		const eValue = e.target.value;
 
 		if (eValue === '0') {
-			setzeroInput('Do not put zero!');
+			setzeroInput("Can't be zero!");
 		} else {
 			setzeroInput('');
 		}
@@ -148,6 +148,7 @@ const App = () => {
 		setbillInput('');
 		setnumberPeople('');
 		setcustomPercent('');
+		setzeroInput('');
 	};
 
 	console.log('tip amount', tipAmount);
@@ -214,8 +215,16 @@ const App = () => {
 					<div className='peopleCalc'>
 						<label htmlFor='num-of-people' className='people'>
 							Number of People
+							<span
+								className='zeroInput'
+								style={{
+									color:
+										numberPeople === '0' ? 'red' : 'black',
+								}}>
+								{zeroInput}
+							</span>
 						</label>
-						<span className='zeroInput'></span>
+
 						<input
 							className='input peopN'
 							type='number'
